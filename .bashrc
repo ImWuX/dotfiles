@@ -10,6 +10,6 @@ alias c="clear"
 alias l="ls"
 alias la="ls -a"
 alias ll="ls -l"
-alias ll="ls -la"
+alias lla="ls -la"
 
 PS1="[\u@\h \w]\$ "
