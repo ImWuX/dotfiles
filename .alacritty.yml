@@ -1,6 +1,11 @@
 cursor:
   style: "Beam"
 
+font:
+  normal:
+    family: Fira Code
+    style: Regular
+
 key_bindings:
   - { key: C, mods: Control|Shift, action: Copy }
   - { key: V, mods: Control, action: Paste }
