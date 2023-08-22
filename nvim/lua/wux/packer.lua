@@ -12,6 +12,12 @@ return require("packer").startup(function(use)
     use("nvim-lua/plenary.nvim")
     use("ThePrimeagen/harpoon")
 
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    }
+
     use({
         "VonHeikemen/lsp-zero.nvim",
         branch = "v2.x",
