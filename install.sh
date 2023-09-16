@@ -16,3 +16,7 @@ read -p "Install ~/.config/leftwm? [y/n] " INSTALLLEFTWM
 if [ "y" = "$INSTALLLEFTWM" ]; then
     ln -s $DOTFILES/leftwm ~/.config/
 fi
+read -p "Install ~/.wakatime? [y/n] " INSTALLWAKATIME
+if [ "y" = "$INSTALLWAKATIME" ]; then
+    ln -s $DOTFILES/wakatime.cfg ~/.wakatime.cfg
+fi
