@@ -1,3 +1,6 @@
+# Dont Save Session History
+unset HISTFILE
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -14,7 +17,15 @@ alias lla="ls -la"
 
 # PS1
 git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ ( \1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PS1="\e[1;93m\u@\h \e[0;36m\w\e[91m\$(git_branch) \e[1;93m>>\e[0m "
+PS1='\[\e[93;1m\]\u@\h\[\e[0m\] \[\e[36m\]\w\[\e[91m\]$(git_branch)\[\e[93;1m\] >> \[\e[0m\]'
+
+# bun
+export PATH=$HOME/.bun/bin:$PATH
+
+# go
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
