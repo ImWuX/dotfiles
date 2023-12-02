@@ -1,15 +1,16 @@
+#!/bin/bash
 DOTFILES=$(pwd -P)
-read -p "Install ~/.bashrc? [y/n] " INSTALLBASH
-if [ "y" = "$INSTALLBASH" ]; then
-    ln -s $DOTFILES/.bashrc ~
-    ln -s $DOTFILES/.bash_profile ~    
-fi
-read -p "Install ~/.config/nvim? [y/n] " INSTALLNVIM
-if [ "y" = "$INSTALLNVIM" ]; then
-    mkdir -p ~/.config
-    ln -s $DOTFILES/nvim ~/.config/
-fi
-read -p "Install ~/.wakatime? [y/n] " INSTALLWAKATIME
-if [ "y" = "$INSTALLWAKATIME" ]; then
-    ln -s $DOTFILES/.wakatime.cfg ~/.wakatime.cfg
-fi
+
+dolink() {
+    mkdir -p $2
+    rm -rf $2/${3:-$1}
+    ln -s $DOTFILES/$1 $2/${3:-$1}
+}
+
+dolink .bashrc ~
+dolink .bash_profile ~
+dolink nvim ~/.config
+dolink .wakatime.cfg ~/.config/wakatime
+dolink pythonrc ~/.config/python
+dolink git-config ~/.config/git config
+dolink wgetrc ~/.config
