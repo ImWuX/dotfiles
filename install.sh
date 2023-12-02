@@ -11,5 +11,5 @@ if [ "y" = "$INSTALLNVIM" ]; then
 fi
 read -p "Install ~/.wakatime? [y/n] " INSTALLWAKATIME
 if [ "y" = "$INSTALLWAKATIME" ]; then
-    ln -s $DOTFILES/wakatime.cfg ~/.wakatime.cfg
+    ln -s $DOTFILES/.wakatime.cfg ~/.wakatime.cfg
 fi
