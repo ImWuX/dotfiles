@@ -6,6 +6,7 @@ if [ "y" = "$INSTALLBASH" ]; then
 fi
 read -p "Install ~/.config/nvim? [y/n] " INSTALLNVIM
 if [ "y" = "$INSTALLNVIM" ]; then
+    mkdir -p ~/.config
     ln -s $DOTFILES/nvim ~/.config/
 fi
 read -p "Install ~/.wakatime? [y/n] " INSTALLWAKATIME
