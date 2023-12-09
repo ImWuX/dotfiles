@@ -2,11 +2,14 @@
 unset HISTFILE
 
 # bun
-export PATH=$HOME/.bun/bin:$PATH
+export PATH=$PATH:$HOME/.bun/bin
+
+# node
+export NODE_REPL_HISTORY=".cache/node_repl_history"
 
 # go
 export GOROOT=/usr/lib/go
-export GOPATH=$HOME/.go
+export GOPATH=$HOME/.cache/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # python
@@ -23,6 +26,7 @@ export npm_config_cache=~/.cache/npm
 
 # wakatime
 export WAKATIME_HOME=~/.config/wakatime
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -43,3 +47,5 @@ git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 PS1='\[\e[93;1m\]\u@\h\[\e[0m\] \[\e[36m\]\w\[\e[91m\]$(git_branch)\[\e[93;1m\] >> \[\e[0m\]'
+
+EDITOR=nvim
