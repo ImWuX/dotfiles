@@ -2,11 +2,21 @@
 DOTFILES=$(pwd -P)
 
 dolink() {
-    mkdir -p $2
-    rm -rf $2/${3:-$1}
-    ln -s $DOTFILES/$1 $2/${3:-$1}
+    local SRC_NAME=$1
+    local DEST_DIR=$2
+    local DEST_NAME=${3:-$1}
+    [[ -z "$SRC_NAME" || -z "$DEST_DIR" || -z "$DEST_NAME" ]] && return
+
+    local SRC_PATH=$DOTFILES/$SRC_NAME
+    local DEST_PATH=$DEST_DIR/$DEST_NAME
+
+    echo "Linking $SRC_PATH to $DEST_PATH"
+    mkdir -p $DEST_DIR
+    rm -rf $DEST_PATH
+    ln -s $SRC_PATH $DEST_PATH
 }
 
+# dolink <src name> <dest dir> [dest name]
 dolink .bashrc ~
 dolink .bash_profile ~
 dolink nvim ~/.config
