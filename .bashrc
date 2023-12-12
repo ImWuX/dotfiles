@@ -48,4 +48,8 @@ git_branch() {
 }
 PS1='\[\e[93;1m\]\u@\h\[\e[0m\] \[\e[36m\]\w\[\e[91m\]$(git_branch)\[\e[93;1m\] >> \[\e[0m\]'
 
+# Set line cursor to blinking bar
+echo -e '\e[5 q'
+
+# Set default editor
 EDITOR=nvim
