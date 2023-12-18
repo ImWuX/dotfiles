@@ -27,6 +27,9 @@ export npm_config_cache=~/.cache/npm
 # wakatime
 export WAKATIME_HOME=~/.config/wakatime
 
+# xinit
+export XINITRC=~/.config/xinit/config
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return

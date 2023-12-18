@@ -24,3 +24,4 @@ dolink .wakatime.cfg ~/.config/wakatime
 dolink pythonrc ~/.config/python
 dolink git-config ~/.config/git config
 dolink wgetrc ~/.config
+dolink xinit ~/.config
