@@ -1,0 +1,13 @@
+#!/bin/sh
+
+resources=$HOME/.config/xinit/resources
+modmap=$HOME/.config/xinit/modmap
+
+if [ -f $resources ]; then
+    xrdb -merge $resources
+fi
+
+if [ -f $modmap ]; then
+    xmodmap $modmap
+fi
+
