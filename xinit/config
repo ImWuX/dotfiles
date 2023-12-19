@@ -11,3 +11,4 @@ if [ -f $modmap ]; then
     xmodmap $modmap
 fi
 
+exec /usr/bin/i3

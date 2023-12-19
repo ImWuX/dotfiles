@@ -25,3 +25,6 @@ dolink pythonrc ~/.config/python
 dolink git-config ~/.config/git config
 dolink wgetrc ~/.config
 dolink xinit ~/.config
+dolink xserverrc ~/.config
+dolink i3 ~/.config
+

@@ -27,8 +27,9 @@ export npm_config_cache=~/.cache/npm
 # wakatime
 export WAKATIME_HOME=~/.config/wakatime
 
-# xinit
+# x11
 export XINITRC=~/.config/xinit/config
+export XSERVERRC=~/.config/xserverrc
 
 
 # If not running interactively, don't do anything
@@ -40,6 +41,7 @@ alias grep="grep --color=auto"
 
 # Define shortcut aliases
 alias c="clear"
+alias n="nvim"
 alias l="ls"
 alias la="ls -a"
 alias ll="ls -l"
