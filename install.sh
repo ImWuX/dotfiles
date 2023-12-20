@@ -28,3 +28,4 @@ dolink xinit ~/.config
 dolink xserverrc ~/.config
 dolink i3 ~/.config
 dolink polybar ~/.config
+dolink alacritty.yml ~/.config/alacritty

@@ -1,11 +1,8 @@
 set $color_bg #282A2E
 set $color_fg #FFFFFF
-#set $color_primary #F0C674
-#set $color_primary #543769
 set $color_primary #9c865d 
 
 smart_borders on
-
 default_border pixel 2
 
 # class                         border          background      text            indicator       child_border
