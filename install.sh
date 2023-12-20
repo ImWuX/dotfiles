@@ -27,4 +27,4 @@ dolink wgetrc ~/.config
 dolink xinit ~/.config
 dolink xserverrc ~/.config
 dolink i3 ~/.config
-
+dolink i3status.conf ~/.config/i3status config
