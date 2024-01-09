@@ -1,0 +1,10 @@
+[window]
+padding = { x = 8, y = 5 }
+dynamic_padding = false
+
+[cursor]
+style = { shape = "Beam" }
+unfocused_hollow = false
+
+[terminal]
+osc52 = "CopyPaste"
